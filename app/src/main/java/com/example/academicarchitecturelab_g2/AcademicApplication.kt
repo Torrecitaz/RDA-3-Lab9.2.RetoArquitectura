@@ -1,9 +1,9 @@
 package com.example.academicarchitecturelab_g2
 
 import android.app.Application
-import com.example.academicarchitecturelab_g2.data.repository.InMemoryTaskRepository
-import com.example.academicarchitecturelab_g2.domain.repository.AcademicTaskRepository
+import com.example.academicarchitecturelab_g2.data.repository.InMemoryGradeRepository
+import com.example.academicarchitecturelab_g2.domain.repository.GradeRepository
 
 class AcademicApplication : Application() {
-    val repository: AcademicTaskRepository by lazy { InMemoryTaskRepository() }
+    val repository: GradeRepository by lazy { InMemoryGradeRepository() }
 }
