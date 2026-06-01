@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AcademicArchitectureLab_G2"
+rootProject.name = "GradeTrackerArchitectureChallenge"
 include(":app")
  
