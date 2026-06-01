@@ -61,11 +61,13 @@ fun AcademicTaskListScreen(viewModel: AcademicTaskViewModel) {
                     }
                 }
                 is AcademicTaskUiState.Error -> {
-                    Text(
-                        text = state.message,
-                        color = MaterialTheme.colorScheme.error,
-                        style = MaterialTheme.typography.bodyLarge
-                    )
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = state.message, color = MaterialTheme.colorScheme.error)
+                        Spacer(modifier = Modifier.height(10.dp))
+                        Button(onClick = { viewModel.onNavigateToCreate() }) {
+                            Text("Reintentar")
+                        }
+                    }
                 }
             }
         }
